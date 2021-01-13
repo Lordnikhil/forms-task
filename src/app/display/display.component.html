@@ -1,1 +1,21 @@
-<p>display works!</p>
+<div *ngIf="formItemsArray && formItemsArray.length > 0">
+    <h1>FormItems Display</h1>
+
+    <table >
+        <tr>
+        <th>Name</th>
+        <th>Number</th>
+        <th>Address</th>
+        <th>Check</th>
+        <th>Edit</th>
+        </tr>
+        <tr *ngFor="let item of formItemsArray; let i = index">
+            <td>{{item.name}}</td>
+            <td>{{item.number}}</td>
+            <td>{{item.address}}</td>
+            <th>{{item.check}}</th>
+            <td><button (click)="sentItemTobeEdited(i)">Edit</button></td>
+        </tr>
+    </table>
+</div>
+

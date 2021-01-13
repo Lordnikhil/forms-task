@@ -1,2 +1,2 @@
-<app-forms></app-forms>
-<app-display></app-display>
+<app-forms [formData]="itemToEdit" (sentFormData)="sendItemToDisplay($event)"></app-forms>
+<app-display [formItem]="itemRecivedFromForm" (itemTobeEdited)="sendItemToEdit($event)"></app-display>

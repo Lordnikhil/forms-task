@@ -1,11 +1,15 @@
 <div>
     <label>Name</label>
-    <input type="text">
+    <input type="text" [(ngModel)]="name"><br>
+
     <label>Mobile</label>
-    <input type="number">
+    <input type="number" [(ngModel)]="number"><br>
+
     <label>Address</label>
-    <input type="text">
+    <input type="text" [(ngModel)]="address"><br>
+
     <label>Checkbox</label>
-    <input type="checkbox">
+    <input type="checkbox" [(ngModel)]="check"><br>
+
     <button (click)="submitDetails()">Submit</button>
 </div>
